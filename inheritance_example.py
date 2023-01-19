@@ -14,6 +14,7 @@ class Lion(Feline):
     def roar(self):
         print(f'{self.name} roar')
 
+
 class Tiger(Feline):
     # override the constructor is a bad idea unless you know what you are doing
     def __init__(self):
@@ -31,7 +32,7 @@ class Tiger(Feline):
         # if not hasattr(self,'name'): super().setName('No Name')
         print(f'{self.name}: stalking')
 
-    def rename(self,name):
+    def rename(self, name):
         super().set_name(name)
 
 
@@ -44,7 +45,7 @@ print(l)
 l.meow()
 l.roar()
 
-t = Tiger() # is a Feline with a different constructor
+t = Tiger()  # is a Feline with a different constructor
 print(t)
 t.stalk()
 t.rename('Tony')

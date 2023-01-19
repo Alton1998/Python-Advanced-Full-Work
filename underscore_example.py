@@ -18,7 +18,7 @@ for _ in range(5):
 p = Person()
 p.set_name('Bryan')
 print(f'Weak private {p._name}')
-p._name = 'NOOOOOOOOO' # should never do this
+p._name = 'NOOOOOOOOO'  # should never do this
 print(f'Weak Private {p._name}')
 
 # Before (Double)
@@ -26,7 +26,7 @@ print(f'Weak Private {p._name}')
 # and tells python to rewrite the name (Mangling)
 p = Person()
 p.work()
-#p.__think()
+# p.__think()
 # c = Child()
 # c.test_double()
 
@@ -42,4 +42,3 @@ print(dir(class_))
 
 p = Person()
 p.__call__()
-

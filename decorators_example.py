@@ -80,7 +80,8 @@ def outline(func):
     def inner(*args, **kwargs):
         print('-' * 20)
         func(*args, **kwargs)
-        print(f'-'*20)
+        print(f'-' * 20)
+
     return inner
 
 
@@ -91,11 +92,10 @@ def list_items(func):
         print(f'kwargs = {kwargs}')
         for x in args:
             print(f'arg={x}')
-        for k,v in kwargs.items():
+        for k, v in kwargs.items():
             print(f'key={k},value={v}')
+
     return inner
-
-
 
 
 @outline  # this is run first

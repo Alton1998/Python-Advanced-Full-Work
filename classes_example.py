@@ -11,7 +11,7 @@ class Cat:
     color = ''
 
     # constructor
-    def __init__(self,name,age=0,color='white'):
+    def __init__(self, name, age=0, color='white'):
         self.name = name
         self.age = age
         self.color = color
@@ -31,5 +31,5 @@ class Cat:
         print(f'{self.name} nom nom nom')
 
 
-x = Cat(name='brfdsfsf',age=10,color='blue')
+x = Cat(name='brfdsfsf', age=10, color='blue')
 x.meow()

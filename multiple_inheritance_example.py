@@ -34,11 +34,12 @@ class FreezerTruck(Freezer, Vehical):  # Here we define the Method resolution Or
         print(f'is a freezer:{issubclass(FreezerTruck, Freezer)}')
         print(f'is a vehicle:{issubclass(FreezerTruck, Vehical)}')
 
-        #super(Freezer,self).display()# Works because of MRO
-        #super(Vehical,self).display()# Fails because of MRO
+        # super(Freezer,self).display()# Works because of MRO
+        # super(Vehical,self).display()# Fails because of MRO
 
         Freezer.display(self)
         Vehical.display(self)
+
 
 t = FreezerTruck()
 t.drive(50)

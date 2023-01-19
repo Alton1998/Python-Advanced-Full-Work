@@ -57,7 +57,7 @@ class CatError(RuntimeError):
 @outline
 def test_cats(qty):
     try:
-        if not isinstance(qty,int):
+        if not isinstance(qty, int):
             raise TypeError('Must be an int')
         if qty < 9:
             raise CatError("Must own more than 9 cats")
@@ -66,7 +66,7 @@ def test_cats(qty):
     finally:
         print('Complete')
 
+
 test_cats('abc')
 test_cats(3)
 test_cats(12.3)
-
