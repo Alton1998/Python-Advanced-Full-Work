@@ -9,17 +9,20 @@ CRITICAL
 """
 
 import logging
+
+
 # from logging import root
 
 def test():
-    print('-'*20)
+    print('-' * 20)
     print(logging.getLevelName(logging.getLogger().getEffectiveLevel()))
     logging.debug('debug message here')
     logging.info('info message here')
     logging.warning("Warning message here")
     logging.error("Error message here")
     logging.critical("Critical message here")
-    print(''*20)
+    print('' * 20)
+
 
 test()
 
@@ -29,7 +32,7 @@ test()
 
 # Get the root logger
 rootlog = logging.getLogger()
-print('Level:'+ logging.getLevelName(rootlog.getEffectiveLevel()))
+print('Level:' + logging.getLevelName(rootlog.getEffectiveLevel()))
 
 # Set it to debug
 rootlog.setLevel(logging.DEBUG)
