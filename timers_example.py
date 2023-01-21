@@ -14,13 +14,15 @@ def display(msg):
 
 def run_once():
     display('Run once:')
-    t = Timer(5,display,['Timeout:'])
-    t.start() # run is called
+    t = Timer(5, display, ['Timeout:'])
+    t.start()  # run is called
+
 
 run_once()
 # Notice this runs immediately
 # But it also runs once
 print('waiting')
+
 
 # Interval timer
 # Wrap it into a class
@@ -30,11 +32,12 @@ print('waiting')
 class RepeatTimer(Timer):
     def run(self) -> None:
         while not self.finished.wait(self.interval):
-            self.function(*self.args,**self.kwargs)
+            self.function(*self.args, **self.kwargs)
         print('Done')
 
-timer = RepeatTimer(1 ,display,['Repeating'])
-timer.start() # going to call run
+
+timer = RepeatTimer(1, display, ['Repeating'])
+timer.start()  # going to call run
 print('Threading started')
 time.sleep(10)
 print('threading finished')
