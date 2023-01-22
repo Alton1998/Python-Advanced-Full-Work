@@ -15,16 +15,18 @@ def test():
         time.sleep(1)
     logging.info(f'Finished:{threadname}')
 
+
 def stop():
     logging.info('Exiting the application')
     exit(0)
+
 
 # Main Function
 def main():
     logging.basicConfig(format='%(levelname)s - %(asctime)s: %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
     logging.info('Main thread Starting')
 
-    timer = Timer(3,stop)
+    timer = Timer(3, stop)
     timer.start()
 
     # t = Thread(target=test,daemon=False)
@@ -32,6 +34,7 @@ def main():
     t.start()
 
     logging.info("Main thread Finished")
+
 
 if __name__ == '__main__':
     main()
