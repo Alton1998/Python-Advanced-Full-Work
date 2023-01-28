@@ -26,13 +26,12 @@ def main():
     processes = []
 
     for x in range(5):
-        p = multiprocessing.Process(target=run,args=[x],daemon=True)
+        p = multiprocessing.Process(target=run, args=[x], daemon=True)
         processes.append(p)
         p.start()
 
     for p in processes:
         p.join()
-
 
     logging.info(f'Finished {name}')
 

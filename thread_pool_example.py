@@ -24,9 +24,9 @@ def main():
     logging.basicConfig(format='%(levelname)s - %(asctime)s: %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
     logging.info('Starting')
     workers = 5
-    items =15
+    items = 15
     with ThreadPoolExecutor(max_workers=workers) as executor:
-        executor.map(test,range(items))
+        executor.map(test, range(items))
     logging.info('Finished')
 
 

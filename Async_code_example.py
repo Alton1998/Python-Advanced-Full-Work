@@ -32,6 +32,7 @@ async def run_async(max):
 
     await asyncio.gather(*tasks)
 
+
 def main():
     display('Main Started')
 
@@ -41,6 +42,7 @@ def main():
     # loop.run_forever()
     loop.close()
     display('Main Finished')
+
 
 if __name__ == '__main__':
     main()

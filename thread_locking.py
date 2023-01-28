@@ -35,7 +35,7 @@ def test(count):
         #     lock.release()
         with lock:
             logging.info(f'Locked:{threadname}')
-            counter +=1
+            counter += 1
             time.sleep(2)
 
     logging.info(f"Completed:{threadname}")
