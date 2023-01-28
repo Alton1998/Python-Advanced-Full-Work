@@ -6,6 +6,8 @@
 import logging
 import multiprocessing
 import socket
+import time
+
 import select
 
 logging.basicConfig(format='%(levelname)s - %(asctime)s: %(message)s',datefmt='%H:%M:%S', level=logging.DEBUG)
@@ -55,6 +57,7 @@ def main():
         if command == 'start':
             logging.info('Starting the server')
             svr.start()
+            time.sleep(10)
         if command == 'stop':
             logging.info('Stopping the server')
             svr.terminate()
